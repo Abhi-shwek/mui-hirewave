@@ -1,0 +1,25 @@
+{
+  "name": "hirewave",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "prestart": "npm run install-all",
+    "install-all": "concurrently \"cd client && npm install\" \"cd server && npm install\"",
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "client": "cd client && npm start",
+    "server": "cd server && npm start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "concurrently": "^9.2.0"
+  },
+  "dependencies": {
+    "@headlessui/react": "^2.2.4",
+    "date-fns": "^4.1.0",
+    "framer-motion": "^12.19.1",
+    "react-router-dom": "^7.6.2"
+  }
+}
